@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#303030"
+    tools:context=".DetailSurahActivity"
+    >
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#303030"
+        android:padding="16dp">
+        <ImageButton
+            android:layout_width="30dp"
+            android:id="@+id/back"
+            android:layout_height="25dp"
+            android:src="@drawable/img_1"
+            android:layout_centerVertical="true"
+            android:background="#303030"
+            >
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/tvJudul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="40dp"
+            android:text="@string/app_name"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="40dp"
+            android:layout_below="@+id/tvJudul"
+            >
+            <TextView
+                android:textColor="#FFFFFF"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTempat"
+                android:layout_width="wrap_content"
+                android:textSize="18sp"
+                android:text="@string/tempat" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tvJumlahAyat"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:text="@string/jumlah_ayat"
+                >
+
+            </TextView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvNoSurah"
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textSize="35sp"
+            android:text="@string/number" />
+
+
+
+    </RelativeLayout>
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/relativeLayout2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="190dp"-->
+<!--        android:padding="20dp"-->
+<!--        android:background="@drawable/satu"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <TextView-->
+<!--            android:textColor="@color/purple_700"-->
+<!--            android:id="@+id/tvJudul"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:paddingBottom="5dp"-->
+<!--            android:textSize="25sp"-->
+<!--            android:text="@string/app_name"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvJumlahAyat"-->
+<!--            android:textColor="@color/purple_700"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="29dp"-->
+<!--            android:layout_below="@+id/tvJudul"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:textSize="18sp"-->
+<!--            android:text="@string/jumlah_ayat" />-->
+
+<!--        <TextView-->
+<!--            android:textColor="@color/purple_700"-->
+<!--            android:id="@+id/tvNamaArab"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="32dp"-->
+<!--            android:textSize="18sp"-->
+<!--            android:layout_below="@+id/tvJumlahAyat"-->
+<!--            android:text="@string/arabic" />-->
+
+<!--        <TextView-->
+<!--            android:textColor="@color/purple_700"-->
+<!--            android:id="@+id/tvTempat"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="34dp"-->
+<!--            android:textSize="18sp"-->
+<!--            android:layout_below="@+id/tvNamaArab"-->
+<!--            android:text="@string/tempat" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvNoSurah"-->
+<!--            android:textColor="@color/purple_700"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="35sp"-->
+<!--            android:paddingStart="20dp"-->
+<!--            android:paddingEnd="15dp"-->
+<!--            android:text="@string/number" />-->
+
+<!--    </RelativeLayout>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btAudio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/audio"
+            android:textColor="@color/white"
+
+            android:layout_marginEnd="8dp"/>
+        <Button
+            android:id="@+id/sembunyikan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sembunyikan"
+            android:textColor="@color/white"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:text="@string/bismillah"
+        android:textColor="@color/white"
+
+        >
+
+    </TextView>
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAyat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="268dp" />
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+</LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.juzamma;
+package com.app.uas_quran;
 
 import org.junit.Test;
 

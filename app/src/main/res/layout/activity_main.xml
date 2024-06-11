@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#303030"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/main">
 
     <RelativeLayout
-        android:id="@+id/header"
-        android:layout_width="match_parent"
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#303030"
-        android:padding="20dp">
-
+        android:padding="16dp">
         <TextView
             android:id="@+id/appTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:text="Juz Amma Mobile"
+            android:text="Juz Amma\nMobile"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
-            android:textStyle="bold" />
-
+            android:textStyle="bold"
+            />
         <ImageView
             android:id="@+id/menuIcon"
             android:layout_width="24dp"
@@ -33,7 +34,8 @@
             android:layout_centerVertical="true"
             android:contentDescription="Menu"
             android:src="@drawable/ic_menu"
-            android:tint="#FFFFFF" />
+            app:tint="#FFFFFF"
+            />
 
     </RelativeLayout>
 
@@ -42,51 +44,71 @@
         android:id="@+id/dateDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/header"
+        android:layout_below="@id/relativeLayout"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
-        android:text="Kamis, 24 Mei 2024"
+        android:layout_marginBottom="20dp"
+        android:text="Tangal"
         android:textColor="#FFFFFF"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        />
+    <!-- end Date -->
 
-    <!-- Suratt -->
-    <LinearLayout
-        android:id="@+id/surahList"
+    <!-- Sub Judus -->
+    <TextView
+        android:id="@+id/judul"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/header"
+        android:layout_below="@id/dateDisplay"
         android:layout_marginTop="16dp"
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:background="#303030">
+        android:layout_marginStart="16dp"
+        android:text="Al Qur'an Juz 30"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        />
+    <!-- end sub judul -->
 
-        <!-- Surat Item -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/judul"
+        android:layout_marginTop="10dp"
+        >
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_surah_item"
-            android:padding="16dp"
-            android:layout_marginBottom="8dp">
+            android:layout_height="32dp">
 
-            <TextView
-                android:id="@+id/surahName1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="An-Naba"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+            <View
+                android:layout_width="35dp"
+                android:layout_height="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"/>
+            <!--                android:background="@drawable/bg_shape"-->
+            <!--                android:backgroundTint="@color/light_pink" -->
 
-            <ImageView
-                android:id="@+id/circle1"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/circle_grey"
-                android:contentDescription="Circle" />
+
         </RelativeLayout>
 
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp">
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvSurah"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </RelativeLayout>

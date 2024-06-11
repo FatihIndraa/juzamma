@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">juzamma</string>
+    <string name="app_name">Juz Amma</string>
+    <string name="quran">Al-Quran Al-Karim</string>
+    <string name="nama_surah">Al-Fatihah</string>
+    <string name="jumlah_ayat">Jumlah Ayat</string>
+    <string name="arti_surah">Pembukaan</string>
+    <string name="arabic">Nama Arab</string>
+    <string name="audio">Audio</string>
+    <string name="tempat">Tempat Diturunkan</string>
+    <string name="surah">List Surah</string>
+    <string name="arab">الفاتحة</string>
+    <string name="bismillah">بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</string>
+    <string name="arti">Arti Ayat : Lorem Ipsum</string>
+    <string name="number">1</string>
+    <string name="infoSurah">Dan apabila dikatakan kepada mereka, \"Berimanlah kamu sebagaimana orang lain yang telah beriman!\" Mereka menjawab, \"Apakah kami akan beriman seperti orang-orang yang kurang akal itu beriman?\" Ingatlah, sesungguhnya mereka itulah orang-orang yang kurang akal, tetapi mereka tidak tahu.</string>
 </resources>
